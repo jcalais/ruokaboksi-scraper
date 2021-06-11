@@ -1,10 +1,11 @@
+import os
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 LOGIN_PAGE = "https://ruokaboksi.fi/oma-tili/"
-USER_EMAIL = "paula.calais@icloud.com"
-USER_PWD = "BR4N"
+USER_EMAIL = os.environ['RB_USERNAME']
+USER_PWD = os.environ['RB_PASSWORD']
 RECIPE_PAGE = "https://ruokaboksi.fi/resepti/?taxonomy=ruokaboksi_recipe_weeks"
 
 def main():
